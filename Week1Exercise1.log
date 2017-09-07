@@ -1,0 +1,4 @@
+2017-09-06 19:49:27,059 0    [http-nio-8080-exec-1] INFO  edu.matc.persistence.UserData  - SQL: SELECT * FROM users
+2017-09-06 19:49:43,341 16282 [http-nio-8080-exec-3] INFO  edu.matc.persistence.UserData  - SQL:  SELECT *    FROM users  WHERE last_name LIKE 'c%'
+2017-09-06 19:57:39,992 0    [http-nio-8080-exec-10] INFO  edu.matc.persistence.UserData  - SQL: SELECT * FROM users
+2017-09-06 19:57:49,692 9700 [http-nio-8080-exec-1] INFO  edu.matc.persistence.UserData  - SQL: SELECT * FROM users
