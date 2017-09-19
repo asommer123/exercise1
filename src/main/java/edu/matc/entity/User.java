@@ -3,6 +3,10 @@ package edu.matc.entity;
 // [done] TODO Add instance variable for the date of birth
 // [done] TODO Add a calculation for the user's age. Age should not be stored, it should be calculated only.
 
+import edu.matc.utility.LocalDateAttributeConverter;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -11,10 +15,23 @@ import java.util.Date;
  *
  * @author pwaite
  */
+@Entity
+@Table(name = "users")
 public class User {
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
+
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy = "increment")
+    @Column(name = "id")
     private String userid;
+
+    @Column(name = "date_of_birth")
+    @Convert(converter = LocalDateAttributeConverter.class)
     private Date dateOfBirth;
 
 
